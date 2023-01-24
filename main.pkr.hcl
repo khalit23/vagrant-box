@@ -16,6 +16,13 @@ build {
   name    = "my-first-image"
   sources = ["source.docker.centos7"]
   provisioner "shell" {
-    script = "./scripts/install_ansible.sh"
+    scripts = [
+      "scripts/base_install.sh",
+      "scripts/install_python.sh"
+    ]
+  }
+
+  post-processor "vagrant" {
+    keep_input_artifact = true
   }
 }
