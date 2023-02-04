@@ -28,6 +28,7 @@ build {
     inline_shebang  = "/bin/bash -ex"
     scripts = [
       "scripts/update_packages.sh",
+      "scripts/nginx/bootstrap.sh",
       "scripts/install_python.sh",
       "scripts/install_docker_engine.sh",
       "scripts/install_git.sh",
